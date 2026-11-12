@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El trabajo digno también es un derecho — material de la publicación</title>
+<meta name="description" content="Carrusel, video y texto de la publicación de Semana 3 sobre el derecho al trabajo digno.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Paleta heredada de la fan page: ámbar, azul cobalto, rojo bermellón, tinta. */
+:root{
+  --amber:#F8CB55; --amber-deep:#EFA637; --blue:#1B4FC4; --red:#DF2F26;
+  --ink:#0D1320; --cream:#FFF8E8;
+  --bg:#F6F1E6; --surface:#FFFFFF; --fg:#1A1712; --dim:#6B6253; --line:#E2D9C6;
+  --radius:16px;
+  --display:'Anton','Haettenschweiler','Arial Narrow',system-ui,sans-serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#14120E; --surface:#1D1A15; --fg:#F3EEE2; --dim:#A49A86; --line:#312C23; color-scheme:dark;}
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.6;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;
+  padding-left:max(20px,env(safe-area-inset-left,0px));
+  padding-right:max(20px,env(safe-area-inset-right,0px))}
+a{color:var(--blue)}
+@media (prefers-color-scheme:dark){a{color:#7FA8FF}}
+
+/* --- portada --- */
+header.hero{background:linear-gradient(168deg,var(--amber) 0%,var(--amber-deep) 100%);color:var(--ink);
+  padding-block:clamp(48px,9vw,86px) clamp(44px,8vw,72px);position:relative;overflow:hidden}
+.eyebrow{font-family:var(--display);letter-spacing:.2em;text-transform:uppercase;
+  font-size:clamp(13px,2.6vw,16px);color:var(--blue);margin:0 0 14px}
+h1{font-family:var(--display);text-transform:uppercase;line-height:1.1;margin:0;
+  font-size:clamp(38px,8.5vw,84px);text-wrap:balance;letter-spacing:.005em}
+h1 .b{color:var(--blue)} h1 .r{color:var(--red)}
+.lede{max-width:56ch;margin:24px 0 0;font-size:clamp(16px,2.4vw,19px);color:rgba(13,19,32,.82)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{background:rgba(13,19,32,.09);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:600;color:var(--ink)}
+
+/* --- secciones --- */
+section{padding-block:clamp(44px,7vw,76px);border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+h2{font-family:var(--display);text-transform:uppercase;letter-spacing:.01em;line-height:1.15;
+  font-size:clamp(26px,4.6vw,40px);margin:0 0 10px;text-wrap:balance}
+.sec-note{color:var(--dim);margin:0 0 30px;max-width:62ch}
+
+/* --- video --- */
+.video-row{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:clamp(24px,4vw,44px);align-items:start}
+@media (max-width:720px){.video-row{grid-template-columns:1fr}}
+video{width:100%;height:auto;max-width:320px;border-radius:var(--radius);display:block;
+  background:#000;box-shadow:0 24px 60px -24px rgba(0,0,0,.5)}
+.facts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.facts li{display:flex;gap:14px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:14px}
+.facts dt{font-weight:600;min-width:120px}
+.facts b{min-width:124px;font-weight:600}
+.facts span{color:var(--dim)}
+
+/* --- piezas --- */
+.piezas{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:clamp(14px,2.4vw,24px)}
+.pieza{border:0;padding:0;background:none;cursor:zoom-in;text-align:left;font:inherit;color:inherit}
+.pieza img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--line);
+  background:var(--amber);box-shadow:0 12px 30px -18px rgba(0,0,0,.5)}
+.pieza figcaption{display:flex;gap:8px;align-items:baseline;margin-top:10px;font-size:14px}
+.pieza .num{font-family:var(--display);color:var(--blue);font-size:15px}
+.pieza .txt{color:var(--dim)}
+figure{margin:0}
+
+/* --- copy --- */
+.bloque{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(18px,3vw,28px);margin-bottom:22px}
+.bloque h3{margin:0 0 4px;font-size:17px}
+.bloque .para{color:var(--dim);font-size:14px;margin:0 0 16px}
+pre{margin:0;white-space:pre-wrap;word-break:break-word;font-family:var(--body);font-size:16px;line-height:1.65}
+.copiar{margin-top:18px;background:var(--blue);color:#fff;border:0;border-radius:999px;
+  padding:11px 22px;font:600 15px var(--body);cursor:pointer}
+.copiar:hover{filter:brightness(1.08)}
+.copiar:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.copiar[data-ok="1"]{background:#17803D}
+
+details{border-top:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font-weight:600}
+details ol{color:var(--dim);margin:14px 0 0;padding-left:22px;display:flex;flex-direction:column;gap:10px}
+
+.fuentes li{margin-bottom:14px;color:var(--dim)}
+.fuentes b{color:var(--fg)}
+
+.descargas{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.descargas a{display:inline-block;background:var(--surface);border:1px solid var(--line);
+  border-radius:999px;padding:11px 20px;text-decoration:none;font-weight:600;font-size:15px}
+.descargas a:hover{border-color:var(--blue)}
+
+footer{border-top:1px solid var(--line);padding-block:40px 60px;color:var(--dim);font-size:14px}
+
+/* --- visor --- */
+dialog{border:0;padding:0;background:transparent;max-width:min(96vw,620px);max-height:94vh}
+dialog::backdrop{background:rgba(10,8,5,.86)}
+dialog img{width:100%;height:auto;border-radius:12px;display:block}
+dialog form{position:absolute;top:10px;right:10px}
+dialog button{background:rgba(0,0,0,.6);color:#fff;border:0;border-radius:999px;width:40px;height:40px;
+  font-size:20px;cursor:pointer;line-height:1}
+@media (prefers-reduced-motion:no-preference){
+  .pieza img{transition:transform .18s ease}
+  .pieza:hover img{transform:translateY(-3px)}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Responsabilidad social · Semana 3</p>
+    <h1><span class="b">El trabajo digno</span><br><span class="r">también es un derecho</span></h1>
+    <p class="lede">Material listo para publicar en la fan page: el carrusel de seis piezas, el video de 50 segundos
+      y el texto de la publicación. Revísenlo y me dicen si hay que ajustar algo antes de subirlo.</p>
+    <div class="chips">
+      <span class="chip">6 piezas · 1080 × 1350</span>
+      <span class="chip">Video · 50 s · 9:16</span>
+      <span class="chip">DUDH art. 23</span>
+      <span class="chip">Constitución art. 25</span>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="wrap">
+  <h2>El video</h2>
+  <p class="sec-note">Formato vertical para Reels y Stories. Las seis escenas son las mismas del carrusel,
+    unidas por un friso de siluetas que avanza en la parte baja y no se detiene en los cortes.</p>
+  <div class="video-row">
+    <video controls playsinline preload="metadata" poster="imagenes/01-portada.png">
+      <source src="video/trabajo-digno-web.mp4" type="video/mp4">
+      Tu navegador no puede reproducir el video. Descárgalo más abajo.
+    </video>
+    <ul class="facts">
+      <li><b>Duración</b><span>50 segundos</span></li>
+      <li><b>Formato</b><span>1080 × 1920 px, vertical 9:16</span></li>
+      <li><b>Audio</b><span>Música y efectos, sin narración</span></li>
+      <li><b>Dónde va</b><span>Reels y Stories de Facebook</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Las seis piezas</h2>
+  <p class="sec-note">Van en este orden. Toca cualquiera para verla grande.</p>
+  <div class="piezas" id="piezas"></div>
+</section>
+
+<section class="wrap">
+  <h2>Texto de la publicación</h2>
+  <p class="sec-note">Copiar y pegar tal cual. La primera línea es la que decide si la gente sigue leyendo:
+    Facebook corta el texto cerca de los 125 caracteres y muestra «Ver más».</p>
+
+  <div class="bloque">
+    <h3>Publicación</h3>
+    <p class="para">Va junto con las seis imágenes.</p>
+    <pre id="copy-post">El trabajo digno no es un privilegio. Es un derecho.
+
+Salario justo, jornada razonable, descanso, seguridad y las mismas oportunidades para todos. Así lo reconocen la Declaración Universal de los Derechos Humanos (art. 23) y la Constitución colombiana (art. 25).
+
+Desliza y mira las 4 claves 👉
+
+¿Qué hace que un trabajo sea digno para ti?
+
+#TrabajoDigno #DerechosHumanos #ResponsabilidadSocial</pre>
+    <button class="copiar" data-copia="copy-post">Copiar texto</button>
+  </div>
+
+  <div class="bloque">
+    <h3>Primer comentario</h3>
+    <p class="para">Publicarlo nosotros mismos apenas salga el post. Saca las fuentes del texto principal y
+      el movimiento temprano ayuda al alcance.</p>
+    <pre id="copy-comment">Fuentes: Declaración Universal de los Derechos Humanos (ONU, 1948), artículo 23 · Constitución Política de Colombia (1991), artículo 25.</pre>
+    <button class="copiar" data-copia="copy-comment">Copiar comentario</button>
+  </div>
+
+  <details>
+    <summary>Textos alternativos de accesibilidad, uno por imagen</summary>
+    <ol id="alts"></ol>
+  </details>
+</section>
+
+<section class="wrap">
+  <h2>Fuentes</h2>
+  <ul class="fuentes">
+    <li><b>Declaración Universal de los Derechos Humanos</b> (ONU, 1948), artículo 23. Reconoce el derecho al
+      trabajo, a la libre elección del empleo, a condiciones equitativas y satisfactorias, a la protección frente
+      al desempleo, y establece «a igual trabajo, igual salario».
+      <br><a href="https://www.un.org/es/about-us/universal-declaration-of-human-rights" target="_blank" rel="noopener">Texto completo en un.org</a></li>
+    <li><b>Constitución Política de Colombia</b> (1991), artículo 25. «El trabajo es un derecho y una obligación
+      social y goza, en todas sus modalidades, de la especial protección del Estado. Toda persona tiene derecho a
+      un trabajo en condiciones dignas y justas.»</li>
+  </ul>
+</section>
+
+<section class="wrap">
+  <h2>Descargas</h2>
+  <p class="sec-note">Los archivos originales, en calidad completa.</p>
+  <div class="descargas">
+    <a href="video/trabajo-digno-full.mp4" download>Video original · 32 MB</a>
+    <a href="copy-y-referencias.md" download>Texto y referencias · .md</a>
+  </div>
+  <p class="sec-note" style="margin-top:20px">Para guardar una imagen: tócala para abrirla grande y mantén
+    pulsado (en el celular) o haz clic derecho y «Guardar imagen» (en el computador).</p>
+</section>
+</main>
+
+<footer class="wrap">
+  <p>Antes de publicar: las seis imágenes en orden, el texto alternativo puesto en cada una, el texto completo
+  con los tres hashtags, el comentario con las fuentes enseguida, y responder los primeros comentarios —
+  la pregunta del cierre solo funciona si hay conversación.</p>
+</footer>
+
+<dialog id="visor">
+  <form method="dialog"><button aria-label="Cerrar">×</button></form>
+  <img id="visor-img" alt="">
+</dialog>
+
+<script>
+const PIEZAS = [
+  {f:"01-portada.png",  t:"Portada"},
+  {f:"02-clave-1.png",  t:"Qué significa el derecho al trabajo"},
+  {f:"03-clave-2.png",  t:"Por qué se relaciona con la dignidad"},
+  {f:"04-clave-3.png",  t:"Igualdad y condiciones justas"},
+  {f:"05-clave-4.png",  t:"Por qué reconocerlo y promoverlo"},
+  {f:"06-cierre.png",   t:"Pregunta abierta y fuentes"},
+];
+const ALTS = [
+  "Portada ámbar con puños alzados: «El trabajo digno también es un derecho».",
+  "Qué significa el derecho al trabajo, con siluetas de trabajadores. Fuente: DUDH artículo 23.1.",
+  "Relación entre trabajo y dignidad humana, con la silueta de una familia tomada de la mano. Fuente: Constitución de Colombia artículo 25.",
+  "Igualdad de oportunidades y condiciones laborales justas, con siluetas de personas diversas, incluida una usuaria de silla de ruedas.",
+  "Por qué reconocer y promover el derecho al trabajo, con siluetas de una comunidad tomada de la mano.",
+  "Cierre sobre fondo oscuro con puños alzados: pregunta abierta y fuentes de consulta.",
+];
+
+document.getElementById("piezas").innerHTML = PIEZAS.map((p,i)=>`
+  <button class="pieza" data-src="imagenes/${p.f}" data-alt="${ALTS[i].replace(/"/g,'&quot;')}">
+    <figure>
+      <img src="imagenes/${p.f}" alt="${ALTS[i].replace(/"/g,'&quot;')}" loading="lazy" width="1080" height="1350">
+      <figcaption><span class="num">${String(i+1).padStart(2,"0")}</span><span class="txt">${p.t}</span></figcaption>
+    </figure>
+  </button>`).join("");
+
+document.getElementById("alts").innerHTML = ALTS.map(a=>`<li>${a}</li>`).join("");
+
+const visor = document.getElementById("visor");
+const visorImg = document.getElementById("visor-img");
+document.getElementById("piezas").addEventListener("click", e=>{
+  const b = e.target.closest(".pieza");
+  if(!b) return;
+  visorImg.src = b.dataset.src;
+  visorImg.alt = b.dataset.alt;
+  if(typeof visor.showModal === "function") visor.showModal();
+  else window.open(b.dataset.src, "_blank");
+});
+visor.addEventListener("click", e=>{ if(e.target === visor) visor.close(); });
+
+document.querySelectorAll(".copiar").forEach(btn=>{
+  btn.addEventListener("click", async ()=>{
+    const texto = document.getElementById(btn.dataset.copia).textContent;
+    const ok = () => { const o = btn.textContent; btn.textContent = "Copiado"; btn.dataset.ok = "1";
+      setTimeout(()=>{ btn.textContent = o; btn.dataset.ok = "0"; }, 1800); };
+    try { await navigator.clipboard.writeText(texto); ok(); }
+    catch(_){
+      const r = document.createRange();
+      r.selectNodeContents(document.getElementById(btn.dataset.copia));
+      const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = "Selecciona y copia";
+    }
+  });
+});
+</script>
+</body>
+</html>
