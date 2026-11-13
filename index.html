@@ -54,6 +54,7 @@ h2{font-family:var(--display);text-transform:uppercase;letter-spacing:.01em;line
 /* --- video --- */
 .video-row{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:clamp(24px,4vw,44px);align-items:start}
 @media (max-width:720px){.video-row{grid-template-columns:1fr}}
+.video-row .pieza{max-width:320px;width:100%}
 video{width:100%;height:auto;max-width:320px;border-radius:var(--radius);display:block;
   background:#000;box-shadow:0 24px 60px -24px rgba(0,0,0,.5)}
 .facts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
@@ -115,7 +116,7 @@ dialog button{background:rgba(0,0,0,.6);color:#fff;border:0;border-radius:999px;
 
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">Responsabilidad social · Semana 3</p>
+    <p class="eyebrow">Responsabilidad social · Semana 3 · Grupo 05</p>
     <h1><span class="b">El trabajo digno</span><br><span class="r">también es un derecho</span></h1>
     <p class="lede">Material listo para publicar en la fan page: el carrusel de seis piezas, el video de 50 segundos
       y el texto de la publicación. Revísenlo y me dicen si hay que ajustar algo antes de subirlo.</p>
@@ -125,6 +126,8 @@ dialog button{background:rgba(0,0,0,.6);color:#fff;border:0;border-radius:999px;
       <span class="chip">DUDH art. 23</span>
       <span class="chip">Constitución art. 25</span>
     </div>
+    <p class="lede" style="margin-top:22px"><a href="infografia.html"
+      style="color:var(--blue);font-weight:600">La infografía de la segunda entrega está acá →</a></p>
   </div>
 </header>
 
@@ -253,7 +256,7 @@ document.getElementById("alts").innerHTML = ALTS.map(a=>`<li>${a}</li>`).join(""
 
 const visor = document.getElementById("visor");
 const visorImg = document.getElementById("visor-img");
-document.getElementById("piezas").addEventListener("click", e=>{
+document.addEventListener("click", e=>{
   const b = e.target.closest(".pieza");
   if(!b) return;
   visorImg.src = b.dataset.src;

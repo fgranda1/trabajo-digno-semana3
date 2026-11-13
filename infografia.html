@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trabajo con dignidad — infografía de la segunda entrega</title>
+<meta name="description" content="Infografía «Trabajo con dignidad: derechos, inclusión y construcción colectiva» del proyecto Narrativas para la construcción de tejido social, Grupo 05, Ibagué.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Misma paleta de la fan page que usa index.html. */
+:root{
+  --amber:#F8CB55; --amber-deep:#EFA637; --blue:#1B4FC4; --red:#DF2F26;
+  --ink:#0D1320; --cream:#FFF8E8;
+  --bg:#F6F1E6; --surface:#FFFFFF; --fg:#1A1712; --dim:#6B6253; --line:#E2D9C6;
+  --radius:16px;
+  --display:'Anton','Haettenschweiler','Arial Narrow',system-ui,sans-serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#14120E; --surface:#1D1A15; --fg:#F3EEE2; --dim:#A49A86; --line:#312C23; color-scheme:dark;}
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.6;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;
+  padding-left:max(20px,env(safe-area-inset-left,0px));
+  padding-right:max(20px,env(safe-area-inset-right,0px))}
+a{color:var(--blue)}
+@media (prefers-color-scheme:dark){a{color:#7FA8FF}}
+
+header.hero{background:linear-gradient(168deg,var(--amber) 0%,var(--amber-deep) 100%);color:var(--ink);
+  padding-block:clamp(48px,9vw,86px) clamp(44px,8vw,72px);position:relative;overflow:hidden}
+.eyebrow{font-family:var(--display);letter-spacing:.2em;text-transform:uppercase;
+  font-size:clamp(13px,2.6vw,16px);color:var(--blue);margin:0 0 14px}
+h1{font-family:var(--display);text-transform:uppercase;line-height:1.1;margin:0;
+  font-size:clamp(38px,8.5vw,84px);text-wrap:balance;letter-spacing:.005em}
+h1 .b{color:var(--blue)} h1 .r{color:var(--red)}
+.lede{max-width:56ch;margin:24px 0 0;font-size:clamp(16px,2.4vw,19px);color:rgba(13,19,32,.82)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{background:rgba(13,19,32,.09);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:600;color:var(--ink)}
+.volver{display:inline-block;margin-top:24px;color:var(--blue);font-weight:600;font-size:15px}
+
+section{padding-block:clamp(44px,7vw,76px);border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+h2{font-family:var(--display);text-transform:uppercase;letter-spacing:.01em;line-height:1.15;
+  font-size:clamp(26px,4.6vw,40px);margin:0 0 10px;text-wrap:balance}
+.sec-note{color:var(--dim);margin:0 0 30px;max-width:62ch}
+
+/* pieza + ficha, en dos columnas */
+.pieza-row{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(24px,4vw,44px);align-items:start}
+@media (max-width:760px){.pieza-row{grid-template-columns:1fr}}
+.pieza{border:0;padding:0;background:none;cursor:zoom-in;text-align:left;font:inherit;color:inherit;
+  max-width:340px;width:100%}
+.pieza img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--line);
+  background:var(--amber);box-shadow:0 18px 44px -22px rgba(0,0,0,.55)}
+.pieza figcaption{margin-top:10px;font-size:14px;color:var(--dim)}
+figure{margin:0}
+@media (prefers-reduced-motion:no-preference){
+  .pieza img{transition:transform .18s ease}
+  .pieza:hover img{transform:translateY(-3px)}
+}
+.facts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.facts li{display:flex;gap:14px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:14px}
+.facts b{min-width:124px;font-weight:600}
+.facts span{color:var(--dim)}
+
+/* bloques de la pieza */
+.bloques{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:clamp(14px,2.4vw,20px)}
+.bq{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.bq .n{font-family:var(--display);color:var(--blue);font-size:26px;line-height:1;display:block;margin-bottom:8px}
+.bq h3{margin:0 0 6px;font-size:17px}
+.bq p{margin:0;color:var(--dim);font-size:14.5px}
+
+/* copy */
+.bloque{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(18px,3vw,28px);margin-bottom:22px}
+.bloque h3{margin:0 0 4px;font-size:17px}
+.bloque .para{color:var(--dim);font-size:14px;margin:0 0 16px}
+pre{margin:0;white-space:pre-wrap;word-break:break-word;font-family:var(--body);font-size:16px;line-height:1.65}
+mark{background:var(--amber);color:var(--ink);padding:1px 5px;border-radius:4px;font-weight:600}
+.copiar{margin-top:18px;background:var(--blue);color:#fff;border:0;border-radius:999px;
+  padding:11px 22px;font:600 15px var(--body);cursor:pointer}
+.copiar:hover{filter:brightness(1.08)}
+.copiar:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.copiar[data-ok="1"]{background:#17803D}
+
+.fuentes li{margin-bottom:14px;color:var(--dim)}
+.fuentes b{color:var(--fg)}
+
+.descargas{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.descargas a{display:inline-block;background:var(--surface);border:1px solid var(--line);
+  border-radius:999px;padding:11px 20px;text-decoration:none;font-weight:600;font-size:15px}
+.descargas a:hover{border-color:var(--blue)}
+
+footer{border-top:1px solid var(--line);padding-block:40px 60px;color:var(--dim);font-size:14px}
+footer ul{margin:14px 0 0;padding-left:22px;display:flex;flex-direction:column;gap:9px}
+
+dialog{border:0;padding:0;background:transparent;max-width:min(96vw,620px);max-height:94vh}
+dialog::backdrop{background:rgba(10,8,5,.86)}
+dialog img{width:100%;height:auto;border-radius:12px;display:block}
+dialog form{position:absolute;top:10px;right:10px}
+dialog button{background:rgba(0,0,0,.6);color:#fff;border:0;border-radius:999px;width:40px;height:40px;
+  font-size:20px;cursor:pointer;line-height:1}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Responsabilidad social · Semana 3 · Grupo 05 · Segunda entrega</p>
+    <h1><span class="b">Trabajo</span> <span class="r">con dignidad</span></h1>
+    <p class="lede">Infografía del proyecto «Narrativas para la construcción de tejido social», con Ibagué
+      (Tolima) como contexto de intervención. Acá está la pieza, lo que dice cada bloque y el texto del post
+      listo para copiar. Revísenlo y me dicen si hay que ajustar algo antes de publicar.</p>
+    <div class="chips">
+      <span class="chip">1080 × 1350 · 4:5</span>
+      <span class="chip">Feed de Facebook</span>
+      <span class="chip">DUDH art. 23</span>
+      <span class="chip">Constitución art. 25</span>
+      <span class="chip">ODS 8 y 10</span>
+    </div>
+    <a class="volver" href="index.html">← El carrusel y el video de la primera entrega están acá</a>
+  </div>
+</header>
+
+<main>
+<section class="wrap">
+  <h2>La pieza</h2>
+  <p class="sec-note">Tócala para verla grande.</p>
+  <div class="pieza-row">
+    <button class="pieza" data-src="imagenes/infografia.png">
+      <figure>
+        <img src="imagenes/infografia.png" width="1080" height="1350"
+          alt="Infografía vertical «Trabajo con dignidad»: la problemática laboral en Ibagué, el objetivo del proyecto, las cuatro actividades numeradas, los ODS 8 y 10, y la invitación al primer encuentro comunitario.">
+        <figcaption>Clic para ampliar</figcaption>
+      </figure>
+    </button>
+    <ul class="facts">
+      <li><b>Formato</b><span>1080 × 1350 px, vertical 4:5</span></li>
+      <li><b>Por qué 4:5</b><span>Es lo más alto que Facebook muestra en el feed sin recortar</span></li>
+      <li><b>Contexto</b><span>Ibagué, Tolima</span></li>
+      <li><b>Encuentro</b><span>Lunes 16 de noviembre, 6:30 a 7:30 p. m. por Teams</span></li>
+      <li><b>Enlace de Teams</b><span>Va en el texto del post, no dentro de la imagen</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Qué dice cada bloque</h2>
+  <p class="sec-note">Cinco bloques más la barra de fuentes al pie.</p>
+  <div class="bloques">
+    <div class="bq"><span class="n">01</span>
+      <h3>Trabajar con dignidad es un derecho</h3>
+      <p>La problemática: en Ibagué, la vulneración de los derechos laborales y el desempleo afectan la
+        dignidad humana, la inclusión social y el derecho al trabajo.</p></div>
+    <div class="bq"><span class="n">02</span>
+      <h3>¿Qué buscamos?</h3>
+      <p>El objetivo del proyecto, literal: informar sobre la vulneración de los derechos laborales,
+        orientar a la ciudadanía y dar a conocer las rutas institucionales de atención y protección.</p></div>
+    <div class="bq"><span class="n">03</span>
+      <h3>Construimos juntos</h3>
+      <p>Las cuatro actividades, numeradas para que se lean como un plan: diálogo con la comunidad,
+        conferencia con invitado especial, taller de literatura y escritura, y socialización de la
+        narrativa colectiva.</p></div>
+    <div class="bq"><span class="n">04</span>
+      <h3>Nuestro compromiso con los ODS</h3>
+      <p>ODS 8, trabajo decente y crecimiento económico. ODS 10, reducción de las desigualdades.
+        Cada uno con su relación concreta con el proyecto.</p></div>
+    <div class="bq"><span class="n">05</span>
+      <h3>Participa y haz parte del diálogo</h3>
+      <p>La invitación al primer encuentro comunitario: la tertulia <em>Derechos laborales en Ibagué</em>,
+        con fecha, hora y modalidad.</p></div>
+    <div class="bq"><span class="n">—</span>
+      <h3>Fuentes</h3>
+      <p>Barra al pie con las tres fuentes: DUDH artículo 23, Constitución artículo 25 y los ODS 8 y 10.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Texto de la publicación</h2>
+  <p class="sec-note">Copiar y pegar tal cual. Antes de publicar hay que reemplazar lo resaltado por el
+    enlace real de Teams — es lo único que falta.</p>
+
+  <div class="bloque">
+    <h3>Publicación</h3>
+    <p class="para">Va junto con la infografía.</p>
+    <pre id="copy-post">Trabajo con dignidad: derechos, inclusión y construcción colectiva.
+
+En Ibagué, la vulneración de los derechos laborales y el desempleo afectan la dignidad humana, la inclusión social y el derecho al trabajo.
+
+Te invitamos al primer encuentro comunitario: la tertulia «Derechos laborales en Ibagué».
+
+📅 Lunes 16 de noviembre
+🕡 6:30 a 7:30 p. m.
+💻 Modalidad virtual · Microsoft Teams
+🔗 <mark>PEGAR AQUÍ EL ENLACE DE TEAMS</mark>
+
+Participación voluntaria y abierta a los interesados.
+
+¡Conectémonos para dialogar, compartir experiencias y reconocer nuestros derechos!
+
+#TrabajoDigno #DerechosHumanos #Ibagué #ResponsabilidadSocial</pre>
+    <button class="copiar" data-copia="copy-post">Copiar texto</button>
+  </div>
+
+  <div class="bloque">
+    <h3>Primer comentario</h3>
+    <p class="para">Publicarlo nosotros mismos apenas salga el post. Saca las fuentes del texto principal y
+      el movimiento temprano ayuda al alcance.</p>
+    <pre id="copy-comment">Fuentes: Declaración Universal de los Derechos Humanos (ONU, 1948), artículo 23 · Constitución Política de Colombia (Secretaría del Senado, 1991), artículo 25 · Objetivos de Desarrollo Sostenible 8 y 10 (ONU).</pre>
+    <button class="copiar" data-copia="copy-comment">Copiar comentario</button>
+  </div>
+
+  <div class="bloque">
+    <h3>Texto alternativo de la imagen</h3>
+    <p class="para">Facebook lo pide en «Editar texto alternativo». Sin esto, quien use lector de pantalla
+      no se entera de nada.</p>
+    <pre id="copy-alt">Infografía vertical «Trabajo con dignidad»: la problemática laboral en Ibagué, el objetivo del proyecto, las cuatro actividades numeradas, los ODS 8 y 10, y la invitación al primer encuentro comunitario.</pre>
+    <button class="copiar" data-copia="copy-alt">Copiar texto alternativo</button>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Fuentes</h2>
+  <ul class="fuentes">
+    <li><b>Declaración Universal de los Derechos Humanos</b> (ONU, 1948), artículo 23.
+      <br><a href="https://www.un.org/es/about-us/universal-declaration-of-human-rights" target="_blank" rel="noopener">Texto completo en un.org</a></li>
+    <li><b>Constitución Política de Colombia</b> (Secretaría del Senado, 1991), artículo 25. «El trabajo es un
+      derecho y una obligación social y goza, en todas sus modalidades, de la especial protección del Estado.»</li>
+    <li><b>Objetivos de Desarrollo Sostenible 8 y 10</b> (ONU). Trabajo decente y crecimiento económico;
+      reducción de las desigualdades.</li>
+  </ul>
+</section>
+
+<section class="wrap">
+  <h2>Descargas</h2>
+  <div class="descargas">
+    <a href="imagenes/infografia.png" download>Infografía · PNG 1080 × 1350</a>
+  </div>
+  <p class="sec-note" style="margin-top:20px">Para guardarla desde el celular: tócala para abrirla grande y
+    mantén pulsado.</p>
+</section>
+</main>
+
+<footer class="wrap">
+  <p><b>Antes de publicar:</b></p>
+  <ul>
+    <li>Pegar el enlace de Teams en el texto del post, donde dice <mark>PEGAR AQUÍ EL ENLACE DE TEAMS</mark>.</li>
+    <li>Poner el texto alternativo en la imagen.</li>
+    <li>Publicar el comentario con las fuentes enseguida.</li>
+    <li>Confirmar que el lunes 16 de noviembre es la fecha correcta del encuentro.</li>
+  </ul>
+</footer>
+
+<dialog id="visor">
+  <form method="dialog"><button aria-label="Cerrar">×</button></form>
+  <img id="visor-img" alt="Infografía «Trabajo con dignidad» ampliada">
+</dialog>
+
+<script>
+const visor = document.getElementById("visor");
+const visorImg = document.getElementById("visor-img");
+document.addEventListener("click", e=>{
+  const b = e.target.closest(".pieza");
+  if(!b) return;
+  visorImg.src = b.dataset.src;
+  if(typeof visor.showModal === "function") visor.showModal();
+  else window.open(b.dataset.src, "_blank");
+});
+visor.addEventListener("click", e=>{ if(e.target === visor) visor.close(); });
+
+document.querySelectorAll(".copiar").forEach(btn=>{
+  btn.addEventListener("click", async ()=>{
+    const texto = document.getElementById(btn.dataset.copia).innerText;
+    const ok = () => { const o = btn.textContent; btn.textContent = "Copiado"; btn.dataset.ok = "1";
+      setTimeout(()=>{ btn.textContent = o; btn.dataset.ok = "0"; }, 1800); };
+    try { await navigator.clipboard.writeText(texto); ok(); }
+    catch(_){
+      const r = document.createRange();
+      r.selectNodeContents(document.getElementById(btn.dataset.copia));
+      const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = "Selecciona y copia";
+    }
+  });
+});
+</script>
+</body>
+</html>
